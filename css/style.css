@@ -1,0 +1,60 @@
+.navbar a{
+    color: #000;
+}
+
+.searchDiv{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchDiv .input-group{
+    width: 40%;
+}
+
+.card{
+    border: 0px;
+    background: rgba(231, 231, 231, 0.692);
+}
+
+.btn-search{
+    border: 1px solid #ddd;
+    background: tomato;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+}
+
+#ingredients{
+    margin: 0px 0px 0px 15px;
+    padding: 0;
+}
+
+.item-details-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top:15px;
+}
+
+.item-details-div .card{
+    width: 445px;
+}
+
+.item-details-div .card img{
+    height: 245px;
+}
+
+.navbar-nav{
+    position: absolute;
+    right: 30px;
+}
+
+.input-group{
+    border:1px solid #ddd;
+    border-radius: 50%;
+}

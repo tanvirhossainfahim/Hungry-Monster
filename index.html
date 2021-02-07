@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" onclick="back()" href="#"><img width="145px" src="https://pnommensen.com/images/foodpanda-logo-png-11.png" alt=""></a>
+                    
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="hello" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reciepies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-body">
+            <div class="searchDiv">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search-text" placeholder="Search for meal"
+                        aria-describedby="button-addon2" autocomplete="off">
+                    <button class="btn-search" type="button" id="search"><i class="fa fa-search"></i> Search</button>
+                </div>
+            </div>
+
+            <div class="output">
+                <div class="row" id="items"></div>
+                <div class="item-details-div" id="foodDetail" style="display: none;">
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="Script/monster.js"></script>
+</body>
+
+</html>
