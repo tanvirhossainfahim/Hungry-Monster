@@ -58,3 +58,25 @@
     border:1px solid #ddd;
     border-radius: 50%;
 }
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ddd;
+    outline: 0;
+    
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
+}
+
+.btn-search:focus{
+    outline: 0;
+}
+
+.card a{
+    text-decoration: none;
+    color: #000;
+}
+
+.card a:hover{
+    color:tomato;
+}

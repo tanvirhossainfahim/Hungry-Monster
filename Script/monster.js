@@ -10,18 +10,18 @@ const itemList = document.getElementById('items');
 search.addEventListener('click', fetchData);
 
 // adding enter press event listener to input field
-searchText.addEventListener('keyup', function(e){
-    if(e.key == 'Enter'){
+searchText.addEventListener('keyup', function (e) {
+    if (e.key == 'Enter') {
         fetchData();
     }
 });
 
 // call API to search the relevent data of given keyword
 function fetchData() {
-    if(searchText.value.length > 0){
+    if (searchText.value.length > 0) {
         const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchText.value;
         fetch(url).then(res => res.json())
-        .then(data => displayList(data));
+            .then(data => displayList(data));
     }
 }
 
@@ -48,7 +48,7 @@ function displayList(data) {
                     </div>`;
             output += template;
         });
-        
+
         // adding final output in html page 
         itemList.innerHTML = output;
 
@@ -68,7 +68,7 @@ function displayList(data) {
 function getFoodDetail(id) {
     const url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
     fetch(url).then(res => res.json())
-    .then(data => displayFoodDetail(data));
+        .then(data => displayFoodDetail(data));
 }
 
 // display food detail in html page
@@ -87,15 +87,15 @@ function displayFoodDetail(data) {
                         <div class="card-body">
                             <h6>Ingredients</h6>
                             <ul class="mb-15" id="ingredients">`;
-    
+
     // blank variable to store list item 
     let listOfIngredients = '';
     for (let i = 1; i <= 20; i++) {// in this API we have 20 ingredients 
-        let indexOfIngredient = 'strIngredient' + i; 
+        let indexOfIngredient = 'strIngredient' + i;
         let indexOfMeasure = 'strMeasure' + i;
 
         // check if any ingredient is not null or empty
-        if (meal[indexOfIngredient] != null && meal[indexOfIngredient].length > 0) { 
+        if (meal[indexOfIngredient] != null && meal[indexOfIngredient].length > 0) {
             listOfIngredients += `<li>${meal[indexOfMeasure]} ${meal[indexOfIngredient]} ${meal[indexOfIngredient].length}</li>`;
         }
     }
@@ -108,7 +108,7 @@ function displayFoodDetail(data) {
 }
 
 // function back
-function back(){
+function back() {
     window.location.reload();
 }
 
